@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Samuel blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="禅与Objective-C编程艺术读书笔记1.条件语句1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677781. if (!error) &amp;#123;	retu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="禅与Objective-C编程艺术读书笔记">
+<meta property="og:url" content="http://yoursite.com/2017/06/30/禅与Objective-C编程艺术/index.html">
+<meta property="og:site_name" content="Samuel blog">
+<meta property="og:description" content="禅与Objective-C编程艺术读书笔记1.条件语句1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677781. if (!error) &amp;#123;	retu">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://ormqbgzmy.bkt.clouddn.com/SamuelChan/20170630192229.png">
+<meta property="og:image" content="http://ormqbgzmy.bkt.clouddn.com/SamuelChan/20170704113634.png">
+<meta property="og:updated_time" content="2017-07-19T12:49:38.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="禅与Objective-C编程艺术读书笔记">
+<meta name="twitter:description" content="禅与Objective-C编程艺术读书笔记1.条件语句1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677781. if (!error) &amp;#123;	retu">
+<meta name="twitter:image" content="http://ormqbgzmy.bkt.clouddn.com/SamuelChan/20170630192229.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/06/30/禅与Objective-C编程艺术/"/>
+
+
+
+
+
+  <title>禅与Objective-C编程艺术读书笔记 | Samuel blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Samuel blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">SamuelChan</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/30/禅与Objective-C编程艺术/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="SamuelChan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Samuel blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">禅与Objective-C编程艺术读书笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-30T11:06:52+08:00">
+                2017-06-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Objective-C/" itemprop="url" rel="index">
+                    <span itemprop="name">Objective-C</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="禅与Objective-C编程艺术读书笔记"><a href="#禅与Objective-C编程艺术读书笔记" class="headerlink" title="禅与Objective-C编程艺术读书笔记"></a>禅与Objective-C编程艺术读书笔记</h3><h4 id="1-条件语句"><a href="#1-条件语句" class="headerlink" title="1.条件语句"></a>1.条件语句</h4><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span> <span class="keyword">if</span> (!error) &#123;</div><div class="line">	<span class="keyword">return</span> success;&#125;</div><div class="line"></div><div class="line"><span class="number">2.</span> 不使用尤达表达式</div><div class="line"><span class="keyword">if</span> ([myValue isEqual:@<span class="number">42</span>]) &#123; ...</div><div class="line"></div><div class="line"><span class="number">3.</span> <span class="literal">nil</span>跟<span class="built_in">BOOL</span>检查: <span class="literal">nil</span>解释为<span class="literal">NO</span> <span class="literal">YES</span>解释为<span class="number">1</span></div><div class="line"><span class="keyword">if</span> (someObject) &#123; ...</div><div class="line"><span class="keyword">if</span> (![someObject boolValue]) &#123; ...</div><div class="line"><span class="keyword">if</span> (!someObject) &#123; ...</div><div class="line">Not Preferred:</div><div class="line"><span class="keyword">if</span> (someObject == <span class="literal">YES</span>) &#123; ... <span class="comment">// Wrong</span></div><div class="line"><span class="keyword">if</span> (myRawValue == <span class="literal">YES</span>) &#123; ... <span class="comment">// Never do this.</span></div><div class="line"><span class="keyword">if</span> ([someObject boolValue] == <span class="literal">NO</span>) &#123; <span class="comment">//Wrong</span></div><div class="line"></div><div class="line"><span class="number">4.</span> Golden Path: 不要嵌套<span class="keyword">if</span>,减少复杂度</div><div class="line">- (<span class="keyword">void</span>)someMethod &#123;</div><div class="line">  <span class="keyword">if</span> (![someOther boolValue]) &#123;</div><div class="line">      <span class="keyword">return</span>;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="comment">//Do something important</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="number">5.</span>复杂的条件表达式:如果<span class="keyword">if</span>的条件判断很复杂,建议先赋值给变量名清晰的<span class="built_in">BOOL</span>变量</div><div class="line"><span class="built_in">BOOL</span> nameContainsSwift = [sessionName containsString:<span class="string">@"Swift"</span>];  </div><div class="line"><span class="built_in">BOOL</span> isCurrentYear = [sessionDateCompontents year] == <span class="number">2014</span>;</div><div class="line"><span class="built_in">BOOL</span> isSwiftSession = nameContainsSwift &amp;&amp; isCurrentYear;<span class="keyword">if</span> (isSwiftSession) &#123;<span class="comment">// Do something very cool</span>&#125;</div><div class="line"></div><div class="line"><span class="number">6.</span> 三元运算符:优先级从右到左</div><div class="line">result = object ? : [<span class="keyword">self</span> createObject];</div><div class="line"></div><div class="line"><span class="number">7.</span> <span class="keyword">case</span>: 单行括号不强制,执行直到<span class="keyword">break</span></div><div class="line"><span class="number">8.</span> 位移枚举</div><div class="line"><span class="keyword">typedef</span> <span class="built_in">NS_OPTIONS</span>(<span class="built_in">NSUInteger</span>, <span class="built_in">UIViewAutoresizing</span>) &#123;    二进制值    十进制</div><div class="line">    <span class="built_in">UIViewAutoresizingNone</span>                 = <span class="number">0</span>,         <span class="number">0000</span> <span class="number">0000</span>  <span class="number">0</span></div><div class="line">    <span class="built_in">UIViewAutoresizingFlexibleLeftMargin</span>   = <span class="number">1</span> &lt;&lt; <span class="number">0</span>,    <span class="number">0000</span> <span class="number">0001</span>  <span class="number">1</span></div><div class="line">    <span class="built_in">UIViewAutoresizingFlexibleWidth</span>        = <span class="number">1</span> &lt;&lt; <span class="number">1</span>,    <span class="number">0000</span> <span class="number">0010</span>  <span class="number">2</span></div><div class="line">    <span class="built_in">UIViewAutoresizingFlexibleRightMargin</span>  = <span class="number">1</span> &lt;&lt; <span class="number">2</span>,    <span class="number">0000</span> <span class="number">0100</span>  <span class="number">4</span></div><div class="line">    <span class="built_in">UIViewAutoresizingFlexibleTopMargin</span>    = <span class="number">1</span> &lt;&lt; <span class="number">3</span>,    <span class="number">0000</span> <span class="number">1000</span>  <span class="number">8</span></div><div class="line">    <span class="built_in">UIViewAutoresizingFlexibleHeight</span>       = <span class="number">1</span> &lt;&lt; <span class="number">4</span>,    <span class="number">0001</span> <span class="number">0000</span>  <span class="number">16</span></div><div class="line">    <span class="built_in">UIViewAutoresizingFlexibleBottomMargin</span> = <span class="number">1</span> &lt;&lt; <span class="number">5</span>     <span class="number">0010</span> <span class="number">0000</span>  <span class="number">32</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="comment">//模拟实现</span></div><div class="line">-(<span class="keyword">void</span>)todo:(<span class="built_in">UIViewAutoresizing</span>)type&#123;</div><div class="line">    <span class="keyword">if</span> (type==<span class="number">0</span>) &#123;</div><div class="line">        <span class="built_in">NSLog</span>(<span class="string">@"UIViewAutoresizingNone"</span>);</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (type &amp; <span class="built_in">UIViewAutoresizingFlexibleLeftMargin</span>) &#123;</div><div class="line">        <span class="built_in">NSLog</span>(<span class="string">@"UIViewAutoresizingFlexibleLeftMargin"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (type &amp; <span class="built_in">UIViewAutoresizingFlexibleWidth</span>) &#123;</div><div class="line">        <span class="built_in">NSLog</span>(<span class="string">@"UIViewAutoresizingFlexibleWidth"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (type &amp; <span class="built_in">UIViewAutoresizingFlexibleRightMargin</span>) &#123;</div><div class="line">        <span class="built_in">NSLog</span>(<span class="string">@"UIViewAutoresizingFlexibleRightMargin"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (type &amp; <span class="built_in">UIViewAutoresizingFlexibleTopMargin</span>) &#123;</div><div class="line">        <span class="built_in">NSLog</span>(<span class="string">@"UIViewAutoresizingFlexibleTopMargin"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (type &amp; <span class="built_in">UIViewAutoresizingFlexibleHeight</span>) &#123;</div><div class="line">        <span class="built_in">NSLog</span>(<span class="string">@"UIViewAutoresizingFlexibleHeight"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (type &amp; <span class="built_in">UIViewAutoresizingFlexibleBottomMargin</span>) &#123;</div><div class="line">        <span class="built_in">NSLog</span>(<span class="string">@"UIViewAutoresizingFlexibleBottomMargin"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">- (<span class="keyword">void</span>)viewDidLoad &#123;</div><div class="line">    [<span class="keyword">super</span> viewDidLoad];</div><div class="line"></div><div class="line">    [<span class="keyword">self</span> todo:<span class="built_in">UIViewAutoresizingFlexibleLeftMargin</span>|<span class="built_in">UIViewAutoresizingFlexibleRightMargin</span>|<span class="built_in">UIViewAutoresizingFlexibleHeight</span>];</div><div class="line">&#125;</div><div class="line">结果输出</div><div class="line"><span class="built_in">UIViewAutoresizingFlexibleLeftMargin</span></div><div class="line"><span class="built_in">UIViewAutoresizingFlexibleRightMargin</span></div><div class="line"><span class="built_in">UIViewAutoresizingFlexibleHeight</span></div></pre></td></tr></table></figure>
+<h4 id="2-命名规范"><a href="#2-命名规范" class="headerlink" title="2.命名规范"></a>2.命名规范</h4><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span>变量: 驼峰命名,类名开头</div><div class="line">	<span class="keyword">static</span> <span class="keyword">const</span> <span class="built_in">NSTimeInterval</span> ZOCSignInViewControllerFadeOutAnimationDuration = <span class="number">0.4</span>;</div><div class="line"></div><div class="line">	<span class="comment">/*static NSString const * kUserName = static NSString const (* kUserName )</span></div><div class="line">     kUserName为指针, *kUserName是指针指向的地址的内容</div><div class="line">     static NSString const * kUserName代表常量指针:指针必须指向任意一个常量</div><div class="line">     */</div><div class="line">    <span class="keyword">static</span> <span class="built_in">NSString</span> <span class="keyword">const</span> *kUserName = <span class="string">@"kUserName"</span>;</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"kUserName = %p,*kUserName = %p"</span>,&amp;kUserName,&amp;(*kUserName));</div><div class="line">    kUserName = <span class="string">@"OtherName"</span>;</div><div class="line">    <span class="built_in">NSLog</span>(<span class="string">@"kUserName = %p,*kUserName = %p"</span>,&amp;kUserName,&amp;(*kUserName));</div><div class="line"></div><div class="line">    <span class="comment">/*static NSString *const kUserName = static NSString  * const (kUserName)</span></div><div class="line">     kUserName为指针常量</div><div class="line">     */</div><div class="line">    <span class="keyword">static</span> <span class="built_in">NSString</span> *<span class="keyword">const</span> name = <span class="string">@"name"</span>;</div><div class="line">	<span class="comment">//name = @"kfkfkfk";//错误</span></div><div class="line"></div><div class="line"><span class="number">2.</span>方法</div><div class="line">  类(-/+)间应该以空格间隔,方法段之间也应该用空格隔开</div><div class="line">  尽可能少用and作为方法段名</div><div class="line">  - (<span class="keyword">instancetype</span>)initWith:(<span class="keyword">int</span>)width and:(<span class="keyword">int</span>)height; <span class="comment">// Never do this.</span></div><div class="line">  推荐一下写法:</div><div class="line">  - (<span class="keyword">void</span>)setExampleText:(<span class="built_in">NSString</span> *)text image:(<span class="built_in">UIImage</span> *)image;  - (<span class="keyword">void</span>)sendAction:(SEL)aSelector to:(<span class="keyword">id</span>)anObject forAllCells:(<span class="built_in">BOOL</span>)flag; - (<span class="keyword">id</span>)viewWithTag:(<span class="built_in">NSInteger</span>)tag;  - (<span class="keyword">instancetype</span>)initWithWidth:(<span class="built_in">CGFloat</span>)width height:(<span class="built_in">CGFloat</span>)height;</div></pre></td></tr></table></figure>
+<h4 id="3-类"><a href="#3-类" class="headerlink" title="3.类"></a>3.类</h4><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span>类名: 头三个字母最好是大写,避免与头两个字母是大写的苹果官方类冲突</div><div class="line"><span class="number">2.</span>initializer</div><div class="line">	alloc 负责创建对象，这个过程包括分配足够的内存来保存对象，写入 isa 指针，初始化引用计数，以及重置所有实例变量。</div><div class="line">	init 负责初始化对象，这意味着使对象处于可用状态。这通常意味着为对象的实例变量赋予合理有用的值。</div><div class="line"><span class="number">3.</span>designated initializer secondary initializer:一个直接,多个间接.</div><div class="line"><span class="number">4.</span>单例:</div><div class="line">	+ (<span class="keyword">instancetype</span>)sharedInstance &#123;		<span class="keyword">static</span> <span class="keyword">id</span> sharedInstance = <span class="literal">nil</span>;</div><div class="line">		<span class="keyword">static</span> <span class="built_in">dispatch_once_t</span> onceToken = <span class="number">0</span>;   </div><div class="line">		<span class="built_in">dispatch_once</span>(&amp;onceToken, ^&#123;			sharedInstance = [[<span class="keyword">self</span> alloc] init];</div><div class="line">		&#125;);		<span class="keyword">return</span> sharedInstance;</div><div class="line">	&#125;</div><div class="line"><span class="number">5.</span>属性:</div><div class="line"><span class="keyword">@property</span> (<span class="keyword">assign</span>, <span class="keyword">getter</span>=isEditable) <span class="built_in">BOOL</span> editable;</div><div class="line"></div><div class="line"><span class="number">6.</span>方法:</div><div class="line">参数断言:判断某个参数是否满足条件,使用<span class="built_in">NSParameterAssert</span>(),debug默认开启,release默认关闭</div><div class="line">    <span class="built_in">NSInteger</span> a = <span class="number">10</span>;</div><div class="line">    <span class="built_in">NSParameterAssert</span>(a&gt; <span class="number">1</span> &amp;&amp; a &gt; <span class="number">10</span>);</div><div class="line">自定义私有方法:不要以_开头,_是苹果保留的,不能冒重载私有方法的险</div><div class="line"></div><div class="line"><span class="number">7.</span>分类:在分类方法名加上前缀,在编写静态库时,一定要注意加上前缀,防止与使用者冲突;发生冲突的时候将会以加载顺序最后的分类方法生效</div><div class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">NSDate</span> (<span class="title">ZOCTimeExtensions</span>)</span></div><div class="line">- (<span class="built_in">NSString</span> *)zoc_timeAgoShort;</div><div class="line"></div><div class="line"><span class="number">8.</span>通知:</div><div class="line"><span class="comment">// Foo.h</span><span class="built_in">UIKIT_EXTERN</span> <span class="built_in">NSString</span> * <span class="keyword">const</span> ZOCFooDidBecomeBarNotification</div><div class="line"><span class="comment">// Foo.m</span><span class="built_in">NSString</span> * <span class="keyword">const</span> ZOCFooDidBecomeBarNotification = <span class="string">@"ZOCFooDidBecomeBarNotification"</span>;</div><div class="line"><span class="keyword">@end</span></div><div class="line"></div><div class="line"><span class="number">9.</span>代理优化:从面向对象到面向协议,只需要遵守ZOCFeedParserProtocol.h的对象</div><div class="line">- (<span class="keyword">instancetype</span>)initWithFeedParser:(<span class="keyword">id</span>&lt;ZOCFeedParserProtocol&gt;)feedParser;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">@protocol</span> <span class="title">ZOCFeedParserDelegate</span>;</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">@protocol</span> <span class="title">ZOCFeedParserProtocol</span> &lt;<span class="title">NSObject</span>&gt;</span></div><div class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">weak</span>) <span class="keyword">id</span> &lt;ZOCFeedParserDelegate&gt; delegate;</div><div class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">strong</span>) <span class="built_in">NSURL</span> *url;</div><div class="line"></div><div class="line">- (<span class="built_in">BOOL</span>)start;</div><div class="line">- (<span class="keyword">void</span>)stop;</div><div class="line"><span class="keyword">@end</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">@protocol</span> <span class="title">ZOCFeedParserDelegate</span> &lt;<span class="title">NSObject</span>&gt;</span></div><div class="line"><span class="keyword">@optional</span></div><div class="line">- (<span class="keyword">void</span>)feedParserDidStart:(<span class="keyword">id</span>&lt;ZOCFeedParserProtocol&gt;)parser;</div><div class="line">- (<span class="keyword">void</span>)feedParser:(<span class="keyword">id</span>&lt;ZOCFeedParserProtocol&gt;)parser didParseFeedInfo:(<span class="keyword">id</span>)info;</div><div class="line">- (<span class="keyword">void</span>)feedParser:(<span class="keyword">id</span>&lt;ZOCFeedParserProtocol&gt;)parser didParseFeedItem:(<span class="keyword">id</span>)item;</div><div class="line">- (<span class="keyword">void</span>)feedParserDidFinish:(<span class="keyword">id</span>&lt;ZOCFeedParserProtocol&gt;)parser;</div><div class="line">- (<span class="keyword">void</span>)feedParser:(<span class="keyword">id</span>&lt;ZOCFeedParserProtocol&gt;)parser didFailWithError:(<span class="built_in">NSError</span> *)error;</div></pre></td></tr></table></figure>
+<p><img src="http://ormqbgzmy.bkt.clouddn.com/SamuelChan/20170630192229.png" alt="SamuelChan/20170630192229.png"></p>
+<h4 id="4-美化代码"><a href="#4-美化代码" class="headerlink" title="4.美化代码"></a>4.美化代码</h4><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span>方法的大括号和其他(<span class="keyword">if</span>/<span class="keyword">else</span>/<span class="keyword">switch</span>/<span class="keyword">while</span>)在同一行开始,新起一行结束</div><div class="line"><span class="number">2.</span>应该总是让冒号对齐。有一些方法签名可能超过三个冒号，用冒号对齐可以让代码更具有可读性。即使有代码块存在，也应该用冒号对齐方法。</div><div class="line">	[<span class="built_in">UIView</span> animateWithDuration:<span class="number">1.0</span></div><div class="line">             	 	 animations:^&#123;</div><div class="line">                  	   <span class="comment">// something</span></div><div class="line">               	  	&#125;</div><div class="line">                 	 completion:^(<span class="built_in">BOOL</span> finished) &#123;</div><div class="line">                       <span class="comment">// something</span></div><div class="line">                 	&#125;];</div></pre></td></tr></table></figure>
+<h4 id="5-代码组织"><a href="#5-代码组织" class="headerlink" title="5.代码组织"></a>5.代码组织</h4><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="number">1</span>.利用代码块:代码块如果在闭合的圆括号中的话,会返回最后的值</div><div class="line">NSURL *url = (&#123;	NSString *urlString = [NSString stringWithFormat:@<span class="string">"%@/%@"</span>, <span class="keyword">baseURLString, </span>endpoint]<span class="comment">;</span></div><div class="line">	[NSURL URLWithString:urlString]<span class="comment">;</span>&#125;)<span class="comment">;</span></div><div class="line"><span class="number">2</span>.<span class="comment">#pragma mark - 是一个在类内部组织代码并且帮助你分组方法实现的好办法</span></div><div class="line"></div><div class="line"><span class="number">3</span>.当你调用NSSelectorFromString的时候,编译器不确定它是否会造成内存泄露,会报警告:performSelector may <span class="built_in">cause</span> a leak <span class="keyword">because </span>its selector is unknown. 如果确定不会泄露,那么就加上下面的代码忽略警告</div><div class="line">	<span class="comment">#pragma clang diagnostic push</span>	<span class="comment">#pragma clang diagnostic ignored "-Warc-performSelector-leaks"</span>      [self performSelector:NSSelectorFromString(@<span class="string">"testtest"</span>) withObject:@<span class="string">""</span>]<span class="comment">;</span></div><div class="line">	<span class="comment">#pragma clang diagnostic pop</span></div><div class="line"></div><div class="line"><span class="number">4</span>.人为明确编译器的警告和错误:</div><div class="line"><span class="comment">#error Whoa, buddy, you need to check for zero here!</span></div><div class="line"><span class="comment">#warning Dude, don't compare floating point numbers like this!</span></div><div class="line"></div><div class="line"><span class="number">5</span>.注释相关:</div><div class="line">没有参数的方法使用<span class="string">"//"</span>进行注释</div><div class="line">只在.h中写注释</div></pre></td></tr></table></figure>
+<h4 id="6-对象之间的通讯"><a href="#6-对象之间的通讯" class="headerlink" title="6.对象之间的通讯"></a>6.对象之间的通讯</h4><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span> block</div><div class="line">(<span class="number">1</span>)把提供需要的数据和错误信息整合到一个单独的block中,比分别提供成功失败的要好</div><div class="line">(<span class="built_in">NSURLSession</span>/<span class="built_in">NSURLConnection</span>)</div><div class="line"></div><div class="line">- (<span class="keyword">void</span>)downloadObjectsAtPath:(<span class="built_in">NSString</span> *)pathcompletion:(<span class="keyword">void</span>(^)(<span class="built_in">NSArray</span> *objects, <span class="built_in">NSError</span> *error))completion;</div><div class="line"></div><div class="line"></div><div class="line">- (<span class="keyword">nullable</span> <span class="built_in">NSURLSessionDataTask</span> *)GET:(<span class="built_in">NSString</span> *)URLString</div><div class="line">                            parameters:(<span class="keyword">nullable</span> <span class="keyword">id</span>)parameters</div><div class="line">                              progress:(<span class="keyword">nullable</span> <span class="keyword">void</span> (^)(<span class="built_in">NSProgress</span> *downloadProgress))downloadProgress</div><div class="line">                               success:(<span class="keyword">nullable</span> <span class="keyword">void</span> (^)(<span class="built_in">NSURLSessionDataTask</span> *task, <span class="keyword">id</span> _Nullable responseObject))success</div><div class="line">                               failure:(<span class="keyword">nullable</span> <span class="keyword">void</span> (^)(<span class="built_in">NSURLSessionDataTask</span> * _Nullable task, <span class="built_in">NSError</span> *error))failure;</div><div class="line"></div><div class="line">(<span class="number">2</span>)block在栈上创建</div><div class="line"></div><div class="line">(<span class="number">3</span>)可复制到堆上: block作为属性,MRC下需要使用<span class="keyword">copy</span>来将它拷贝到堆上;</div><div class="line">            ARC下只是为了一致性将block属性声明为<span class="keyword">copy</span>,编译器会自动将block拷贝到堆上</div><div class="line"></div><div class="line">(<span class="number">4</span>)block会捕获栈上的变量(指针),将其复制为自己私有的<span class="keyword">const</span>变量</div><div class="line">(<span class="number">5</span>)如果要修改block中的变量(指针),那么变量和指针必须使用__block关键字声明:__block变量的栈变量被复制到堆上,复制完成后,block将会引用的是这份已经在堆上的副本</div><div class="line">(<span class="number">6</span>)使用:</div><div class="line"> - 直接在 block 里面使用关键词 <span class="keyword">self</span>:  只能在 block 不是作为一个 property 的时候使用，否则会导致 <span class="keyword">retain</span> cycle。</div><div class="line"> - 在 block 外定义一个 __<span class="keyword">weak</span> 的 引用到 <span class="keyword">self</span>，并且在 block 里面使用这个弱引用: 当 block 被声明为一个 property 的时候使用。</div><div class="line"> - 在 block 外定义一个 __<span class="keyword">weak</span> 的 引用到 <span class="keyword">self</span>，并在在 block 内部通过这个弱引用定义一个 __<span class="keyword">strong</span> 的引用。: 和并发执行有关。当涉及异步的服务的时候，block 可以在之后被执行，并且不会发生关于 <span class="keyword">self</span> 是否存在的问题,保证在block执行期间引用的对象不被置为<span class="literal">nil</span>,但是也可能存在block执行时对象已经为空</div><div class="line"></div><div class="line"><span class="number">2.</span>DataSource和delegate   ---  委托者 vs 代理者</div><div class="line">(<span class="number">1</span>)代理方法的第一个参数必须是调用代理者:否则没有办法区分不同的委托者</div><div class="line">(<span class="number">2</span>)	<span class="keyword">@required</span> <span class="keyword">@optional</span> 默认的代理方法为<span class="keyword">@required</span></div><div class="line">	<span class="keyword">if</span> ([<span class="keyword">self</span>.delegate 	respondsToSelector:<span class="keyword">@selector</span>(signUpViewControllerDidPressSignUpButton:	)]) &#123;</div><div class="line">		[<span class="keyword">self</span>.delegate signUpViewControllerDidPressSignUpButton:<span class="keyword">self</span>];	&#125;</div><div class="line">(<span class="number">3</span>)继承代理实现:</div><div class="line">继承关系:<span class="built_in">UIViewControllerB</span> &lt; <span class="built_in">UIViewControllerA</span> &lt; <span class="built_in">UIViewController</span></div><div class="line"><span class="built_in">UIViewControllerA</span>.h遵守<span class="built_in">UITableViewDelegate</span></div><div class="line"><span class="built_in">UIViewControllerB</span>.m想要重写<span class="built_in">UITableViewDelegate</span></div><div class="line">- 如果代理方法是必须实现的话, <span class="built_in">UIViewControllerB</span>可以直接call [<span class="keyword">super</span> ...]</div><div class="line">- 如果是<span class="keyword">@optional</span>的代理方法, <span class="built_in">UIViewControllerB</span>必须检查<span class="built_in">UIViewControllerA</span>是否有实现	- (<span class="built_in">CGFloat</span>)tableView:(<span class="built_in">UITableView</span> *)tableView heightForRowAtIndexPath:(<span class="built_in">NSIndexPath</span> *)indexPath &#123;		<span class="built_in">CGFloat</span> retVal = <span class="number">0</span>;		<span class="keyword">if</span> ([[<span class="built_in">UIViewControllerA</span> <span class="keyword">class</span>] instancesRespondToSelector:<span class="keyword">@selector</span>(tableView:heightForRowAtIndexPath:)]) &#123;		retVal = [<span class="keyword">super</span> tableView:<span class="keyword">self</span>.tableView heightForRowAtIndexPath:indexPath];</div><div class="line">		&#125;		<span class="keyword">return</span> retVal + <span class="number">10.0</span>f;</div><div class="line">	&#125;</div><div class="line">参考资料:http:<span class="comment">//devetc.org/code/2014/03/02/subclassing-delegates.html#fn:_cmd-arg(在相同方法中@selector(xxx) == _cmd)</span></div></pre></td></tr></table></figure>
+<h4 id="7-多重代理"><a href="#7-多重代理" class="headerlink" title="7.多重代理"></a>7.多重代理</h4><ol>
+<li>多个代理对象由一个proxy类来管理,proxy作为委托者的delegate</li>
+<li>proxy并没有实现代理回调,所以这里需要使用到运行时的相关方法<br><img src="http://ormqbgzmy.bkt.clouddn.com/SamuelChan/20170704113634.png" alt="SamuelChan/20170704113634.png"></li>
+<li>相关代码  </li>
+</ol>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">(<span class="number">1</span>)设置proxy代理</div><div class="line">    _multipleDelegate = [MultipleDelegate new];</div><div class="line">    <span class="comment">//添加要处理delegate方法的对象</span></div><div class="line">    <span class="built_in">NSArray</span> *array = @[<span class="keyword">self</span>, [ScrollDelegate new]];</div><div class="line">    _multipleDelegate.allDelegates = array;</div><div class="line">    <span class="keyword">self</span>.scrollView.delegate = (<span class="keyword">id</span>)_multipleDelegate;</div><div class="line">(<span class="number">2</span>)防止强引用</div><div class="line">- (<span class="keyword">void</span>)setDelegateTargets:(<span class="built_in">NSArray</span> *)delegateTargets&#123;</div><div class="line">    <span class="keyword">self</span>.weakRefTargets = [<span class="built_in">NSPointerArray</span> weakObjectsPointerArray];</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">id</span> delegate <span class="keyword">in</span> delegateTargets) &#123;</div><div class="line">        [<span class="keyword">self</span>.weakRefTargets addPointer:(__bridge <span class="keyword">void</span> *)delegate];</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">(<span class="number">3</span>)分发代理方法:</div><div class="line">- (<span class="built_in">NSMethodSignature</span> *)methodSignatureForSelector:(SEL)aSelector&#123;</div><div class="line">    <span class="built_in">NSMethodSignature</span> *signature = [<span class="keyword">super</span> methodSignatureForSelector:aSelector];</div><div class="line">    <span class="keyword">if</span> (!signature) &#123;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">id</span> target <span class="keyword">in</span> <span class="keyword">self</span>.allDelegates) &#123;</div><div class="line">            <span class="keyword">if</span> ((signature = [target methodSignatureForSelector:aSelector])) &#123;</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> signature;</div><div class="line">&#125;</div><div class="line"> </div><div class="line">- (<span class="keyword">void</span>)forwardInvocation:(<span class="built_in">NSInvocation</span> *)anInvocation&#123;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">id</span> target <span class="keyword">in</span> <span class="keyword">self</span>.allDelegates) &#123;</div><div class="line">        <span class="keyword">if</span> ([target respondsToSelector:anInvocation.selector]) &#123;</div><div class="line">            [anInvocation invokeWithTarget:target];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">由于我们调用delegate的方法时，一般会先调用[delegate responseToSelector]方法，所以，我们还需要实现这个方法：</div><div class="line">- (<span class="built_in">BOOL</span>)respondsToSelector:(SEL)aSelector&#123;</div><div class="line">    <span class="keyword">if</span> ([<span class="keyword">super</span> respondsToSelector:aSelector]) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="literal">YES</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">id</span> target <span class="keyword">in</span> <span class="keyword">self</span>.allDelegates) &#123;</div><div class="line">        <span class="keyword">if</span> ([target respondsToSelector:aSelector]) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="literal">YES</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="literal">NO</span>;</div><div class="line">&#125;  </div><div class="line"><span class="keyword">@end</span></div></pre></td></tr></table></figure>
+<p><a href="http://www.cocoachina.com/ios/20151208/14595.html" target="_blank" rel="external">多个代理资料</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/06/15/应用评价/" rel="next" title="应用评价">
+                <i class="fa fa-chevron-left"></i> 应用评价
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/06/Pro.Multithreading.and.Memory.ManageMent.for.iOS.and.OS.X/" rel="prev" title="Pro.Multithreading.and.Memory.Management.for.iOS.and.OS.X(MRC和ARC)">
+                Pro.Multithreading.and.Memory.Management.for.iOS.and.OS.X(MRC和ARC) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="SamuelChan" />
+          <p class="site-author-name" itemprop="name">SamuelChan</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#禅与Objective-C编程艺术读书笔记"><span class="nav-number">1.</span> <span class="nav-text">禅与Objective-C编程艺术读书笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-条件语句"><span class="nav-number">1.1.</span> <span class="nav-text">1.条件语句</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-命名规范"><span class="nav-number">1.2.</span> <span class="nav-text">2.命名规范</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-类"><span class="nav-number">1.3.</span> <span class="nav-text">3.类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-美化代码"><span class="nav-number">1.4.</span> <span class="nav-text">4.美化代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-代码组织"><span class="nav-number">1.5.</span> <span class="nav-text">5.代码组织</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-对象之间的通讯"><span class="nav-number">1.6.</span> <span class="nav-text">6.对象之间的通讯</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-多重代理"><span class="nav-number">1.7.</span> <span class="nav-text">7.多重代理</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">SamuelChan</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
